@@ -1,0 +1,26 @@
+{% extends 'Registro/base.html' %} 
+
+
+{% block titulo_principal %}
+
+<div class="head">
+  
+    <div id="titulo_pagina" ><h3>Agregar Paciente</h3></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'home' %} " class="btn btn-info">Volver al inicio</a>
+    <h1>Agregar Pacientes</h1>
+    
+    <div class="content container">
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">GRABAR</button>
+
+        <a href="{% url 'list_pacientes' %}" class="btn btn-warning">Listar Pacientes</a>
+    </form>
+    </div>
+
+{% endblock %}

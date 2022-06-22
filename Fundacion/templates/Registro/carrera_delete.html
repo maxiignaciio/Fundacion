@@ -1,0 +1,23 @@
+{% extends 'Registro/base.html' %} 
+
+{% block titulo_principal %}
+<div class="head">
+    <div id="titulo_pagina" ><h3>Eliminar Paciente</h3></div>
+</div>
+
+{%endblock%}
+
+{% block content %}
+
+    <div class="text-center">
+        <form method="post">
+            {% csrf_token %}
+            <div class="commit-delete">
+            <p class="delete-msg">Estas seguro de eliminar el paciente con rut {{ object.rut }} y nombre {{ object.nombre }}?</p>
+
+            <a href="{% url 'list_pacientes' %}" class="btn btn-secondary">NO</a>
+            <button class="btn btn-primary" type="submit">Si</button>
+        </div>
+        </form>
+    </div>
+{% endblock %}
