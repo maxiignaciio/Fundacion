@@ -1,0 +1,23 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+#titulo_pagina{
+    text-align: center;
+}
+
+.head{
+    background-color: #6c4675;
+    color: white;
+    height: 100px;
+
+}
+
+#titulo_pagina h3{
+    text-align: center;
+    font-size: 60px;
+}
+
+.commit-delete{
+    border: 1px solid black;
+}
